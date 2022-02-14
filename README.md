@@ -26,7 +26,7 @@ blockchain
  - 256000 seconds to difficulty change 
  - 250000 miner-configurable limit on block size in bytes 
  - 1000000 hard limit on block size in bytes 
- - 5000 coins per block
+ - 500 coins per block
  - 2016 blocks to retarget difficulty
 
 For more information, as well as an immediately useable, binary version of
