@@ -1,0 +1,11 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "./auto-configure" # automated configurations are completed by dependabot using Api_key in secrets to keep dependencies upto_date and to build ecosystems to maintain bitdash coin blockchain continuously creating new blocks bot. can search. github.comm repos for script mining configsfor new transactions creations and confirmations after all bitcoin coins received by blocks and transactions has been recieved to the repository multisig wallet public address 
+    directory: "./home/Bitdash/" # Location of package manifests
+    schedule:
+      interval: "daily"
