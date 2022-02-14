@@ -1,0 +1,1 @@
+you are welcome to contribute to support Bitdash/BDSH Coin to help get this currency up and off the ground. please follow all contributing rules and regs enforced by github.com Thank-you for being a part of the BitdashCoin developmentteam.  
