@@ -59,7 +59,7 @@ Jobs:
 	mv build/out/qt-win32-4.8.3-gitian-r1.zip inputs/
 	./bin/gbuild ../bitdash/contrib/gitian-descriptors/deps-win32.yml
 	mv build/out/bitdash-deps-0.0.5.zip inputs/
-
+//
  Build bitdashd and bitdash-qt on Linux32, Linux64, and Win32:
   
 	./bin/gbuild --commit bitdash=v${VERSION} ../bitdash/contrib/gitian-descriptors/gitian.yml
@@ -80,12 +80,12 @@ Jobs:
   1. linux 32-bit and 64-bit binaries + source (bitdash-${VERSION}-linux-gitian.zip)
   2. windows 32-bit binary, installer + source (bitdash-${VERSION}-win32-gitian.zip)
   3. Gitian signatures (in gitian.sigs/${VERSION}[-win32]/(your gitian key)/
-   name: release
+//   name: release
    uses github packages
    command $ .ci/repackage_gitian_builds_for_release_as_stand-alone_zip/tar/installer_exe
              **Linux .tar.gz:**.ci/unzip_bitdash-${VERSION}-linux-gitian.zip -d bitdash-${VERSION}-linux	tar_czvf_bitdash-${VERSION}-linux.tar.gz bitdash-${VERSION}-linux
 	rm_-rf_bitdash-${VERSION}-linux
-
+//
 **Windows .zip and setup.exe:**
 
 	unzip bitdash-${VERSION}-win32-gitian.zip -d bitdash-${VERSION}-win32
@@ -110,7 +110,7 @@ Jobs:
 
 * Code-sign Windows -setup.exe (in a Windows virtual machine) and
   OSX Bitcoin-Qt.app (Note: only Gavin has the code-signing keys currently)
-
+//
 * upload builds to SourceForge
 
 * create SHA256SUMS for builds, and PGP-sign it
@@ -133,12 +133,12 @@ Commit your signature to gitian.sigs:
 	git commit -a
 	git push  # Assuming you can push to the gitian.sigs tree
 	popd
-
+//
 -------------------------------------------------------------------------
-
+//
 ### After 3 or more people have gitian-built, repackage gitian-signed zips:
 
-# From a directory containing bitdash source, gitian.sigs and gitian zips
+//# From a directory containing bitdash source, gitian.sigs and gitian zips
 # export VERSION=0.5.1 $ mkdir bitdash-${VERSION}-linux-gitian
 	pushd bitdash-${VERSION}-linux-gitian
 	unzip ../bitdash-${VERSION}-linux-gitian.zip $ mkdir gitian
@@ -162,7 +162,7 @@ Commit your signature to gitian.sigs:
 	zip -r bitdash-${VERSION}-win32-gitian.zip *
 	cp bitdash-${VERSION}-win32-gitian.zip ../
 	popd
-
-- Upload gitian zips to SourceForge
+//
+- Upload gitian zips to SourceForge//
 - # Celebrate 
 /**
