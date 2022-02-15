@@ -43,11 +43,10 @@ Jobs:
 	export VERSION=0.8.0 $	cd ./gitian-builder
  Jobs:
   name:
-  Fetch and build inputs: (first time, or when dependency versions change)
-  uses: runner-github actions/api
-   command: mkdir -p inputs; cd inputs/
-	wget: 'http://miniupnp.free.fr/files/download.php?file=miniupnpc-1.6.tar.gz' -O miniupnpc-1.6.tar.gz
-	wget: 'http://www.openssl.org/source/openssl-1.0.1c.tar.gz'
+#  Fetch and build inputs: (first time, or when dependency versions change)
+#  uses: runner-github actions/api
+#   command: mkdir -p inputs; cd inputs/
+*/      wget: 'http://miniupnp.free.fr/files/download.php?file=miniupnpc-1.6.tar.gz' -O miniupnpc-1.6.tar.gz	wget: 'http://www.openssl.org/source/openssl-1.0.1c.tar.gz'
 	wget: 'http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz'
 	wget: 'http://zlib.net/zlib-1.2.6.tar.gz'
 	wget: 'ftp://ftp.simplesystems.org/pub/libpng/png/src/libpng-1.5.9.tar.gz'
@@ -124,7 +123,8 @@ Jobs:
 * update wiki download links
 
 * update wiki changelog: [https://en.bitdash.it/wiki/Changelog](https://en.bitcoin.it/wiki/Changelog)
-
+/**
+*/
 Commit your signature to gitian.sigs:
 
 	pushd gitian.sigs
@@ -165,3 +165,4 @@ Commit your signature to gitian.sigs:
 
 - Upload gitian zips to SourceForge
 - # Celebrate 
+**/
