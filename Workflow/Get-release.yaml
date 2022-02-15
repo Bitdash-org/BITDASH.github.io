@@ -21,6 +21,7 @@ Jobs:
 
   uses: tclindner/sentry-releases-action@v1.2.0
   - name: Deploy to packagecloud.io
+  - command: > mv $HOME/Downloads/packagecloud-cli-settings $HOME/.packagecloud{"url":"https://packagecloud.io", "token": "0788583050b5810b42c143e3a88df75dea787464da33dbfb"}> sudo gem install package_cloud$ ./configure $ make $ sudo make install
 
   uses: lpenz/ghaction-packagecloud@v0.3
   jobs: 
