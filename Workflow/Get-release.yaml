@@ -4,11 +4,35 @@ Release Process
 * * *
 Jobs:
  name: Update (commit) version in sources
-  command: .ci/bitdash-qt.pro_
-	contrib/verifysfbinaries/verify.sh_
-	doc/README*_
-	share/setup.nsi_
-	src/clientversion.h_(change CLIENT_VERSION_IS_RELEASE to true)
+  - name: Create a Sentry.io release
+
+  uses: tclindner/sentry-releases-action@v1.2.0
+  - name: PyInstaller Windows
+
+  uses: JackMcKew/pyinstaller-action-windows@v0.1.2
+  - name: GPR authentication for npm
+  
+
+  uses: aquacash5/npm-gpr-auth@v2
+  - name: Serverless GithubAction
+
+  uses: SuprGames/serverless-github-action@v1.77
+  - name: Create a Sentry.io release
+
+  uses: tclindner/sentry-releases-action@v1.2.0
+  - name: Deploy to packagecloud.io
+
+  uses: lpenz/ghaction-packagecloud@v0.3
+  jobs: 
+  deploy: 
+  runs-on: ubuntu-latest 
+  steps: 
+  - uses: actions/checkout@v2 
+  - <build debian package> 
+  - uses: docker://lpenz/ghaction-packagecloud:v0.2 with: repository: lpenz/debian/stretch env: PACKAGECLOUD_TOKEN: ${{ secrets.PACKAGECLOUD_TOKEN }}https://packagecloud.io/Bitdashorg/
+  jobs:
+    name: run qt.pro tests
+  command: .ci/bitdash-qt.pro_contrib/verifysfbinaries/verify.sh_ $ .ci/update_doc/README*_ $ --share-setup.nsi $ .ci/_-src/clientversion.h_[(!change CLIENT_VERSION_IS_RELEASE to true)^Z]
 
   name: tag version in git
    command: .ci/git_tag_-a_v0.8.0_--mkfile-write_release_notes/git_shortlog_--no-merges_v0.7.2..v0.8.0
@@ -18,6 +42,7 @@ Jobs:
   name:	export SIGNER=(your gitian key, ie bluematt, sipa, etc)
 	export VERSION=0.8.0 $	cd ./gitian-builder
  Jobs:
+  name:
   Fetch and build inputs: (first time, or when dependency versions change)
   uses: runner-github actions/api
    command: mkdir -p inputs; cd inputs/
