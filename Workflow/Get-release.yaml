@@ -1,7 +1,7 @@
 Release Process
 ====================
 
-* * *
+# .ci/-Wnone_ignore_[in-file_compilation<!errors>]]⁴
 Jobs:
  name: Update (commit) version in sources
   - name: Create a Sentry.io release
