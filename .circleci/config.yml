@@ -12,17 +12,27 @@ orbs:
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs: 
-    docker:
-    image: cimg/base:stable 
-steps: 
-                     cypress/setup:
-                     build: bitdash coin node, rpc console 
-                      working_directory: https:192.0.0.4:12345 
-                      job:
-                          commandsimage: cimg/base:stable 
-                          steps: 
-                              - browser-tools/install-browser-tools: chromedriver-install-dir: usr/local/bin/debian firefox-install-dir: usr/local/bin/rpcconsole geckodriver-install-dir: usr/local/bin/nodes workflows: example-workflow: jobs: - example-job-job:
-                                    steps:
+    commandsimage: cimg/base:stable 
+    steps: 
+    - cypress/setup:
+      build: bitdash coin node, rpc console 
+      working_directory: 
+          .ci/auto-configure
+    commandsimage: cimg/base:stable 
+        - browser-tools/install-browser-tools: 
+            chromedriver-install-dir: 
+                usr/local/bin/debian 
+                firefox-install-dir: 
+                    usr/local/bin/rpcconsole 
+                    geckodriver-install-dir: 
+                        usr/local/bin/nodes 
+                        workflows: 
+                            example-workflow: 
+                                jobs: 
+                                    - example
+                                    -job
+                                    -job:
+                        steps:
                                             browser-tools/install-browser-tools:
                                             chromedriver-install-dir: usr/local/bin/debian 
                                             firefox-install-dir: usr/local/bin/rpcconsole 
