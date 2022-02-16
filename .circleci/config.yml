@@ -18,25 +18,22 @@ jobs:
       build: bitdash coin node, rpc console 
       working_directory: 
           .ci/auto-configure
-    commandsimage: cimg/base:stable 
-        - browser-tools/install-browser-tools: 
-            chromedriver-install-dir: 
-                usr/local/bin/debian 
-                firefox-install-dir: 
-                    usr/local/bin/rpcconsole 
-                    geckodriver-install-dir: 
-                        usr/local/bin/nodes 
-                        workflows: 
-                            example-workflow: 
-                                jobs: 
-                                    - example
-                                    -job
-                                    -job:
-                        steps:
-                                            browser-tools/install-browser-tools:
-                                            chromedriver-install-dir: usr/local/bin/debian 
-                                            firefox-install-dir: usr/local/bin/rpcconsole 
-                                            geckodriver-install-dir: usr/local/bin/nodes 
+                          - commandsimage 
+          cimg/base:stable 
+    - browser: -tools/install
+    - browser
+    - tools 
+    chromedriver:
+    - install
+    - dir usr/local/bin/debian 
+    firefox:
+            -install
+            -dir usr/local/bin/rpcconsole 
+    geckodriver:
+            -install
+            -dir usr/local/bin/nodes 
+            
+
 
 
 
