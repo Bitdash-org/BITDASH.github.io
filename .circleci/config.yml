@@ -18,7 +18,8 @@ windows/win3
 chrome/browse 
 build:
 - bitdash coin node
-- rpc console                        
+- rpc console 
+   command:  EXIT_STATUS=1 if [[ $EXIT_STATUS == 0 ]] then echo yes else (exit $EXIT_STATUS) fi                      
     docker: 
     - img
     commandsimage:
