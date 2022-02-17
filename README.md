@@ -14,7 +14,7 @@ Bitdash is a upgraded version of Litecoin forked from the original Bitcoin. Bitd
 
 Features:
  Bitdash will be a less volatile coin steming from lower transaction fees and higher coinvalue transfer at near feeless transactions costs. Also, Bitdash will securely mined by less drag on systems and  more stable due to its length of time increase of 7.5 minutes during and between per block creation allowing for lower cost mining and proof of work processes
- Bitdash will produce four times the amount of coins mineable thru blockreward than Bitcoin and to compensate for lack of high transaction fees to miners we have developed Bitdash to start with a 5000 coin block reward. it pays to mine Bitdash solo!
+ Bitdash will produce four times the amount of coins mineable thru blockreward than Bitcoin and to compensate for lack of high transaction fees to miners we have developed Bitdash to start with a 500 coin block reward. it pays to mine Bitdash solo!
 
 Coin Settings for the blockchain:
 - subsidy halves in 840k blocks (~4 years)
@@ -28,6 +28,7 @@ blockchain
  - 1000000 hard limit on block size in bytes 
  - 500 coins per block
  - 2016 blocks to retarget difficulty
+ - node pool.bitdash.network:3333
 
 For more information, as well as an immediately useable, binary version of
 the bitdash client sofware, see http://www.bitdash.org.
