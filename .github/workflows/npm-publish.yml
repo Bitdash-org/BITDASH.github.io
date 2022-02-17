@@ -1,12 +1,28 @@
-name: Create issue on commit
+name: Pull request labeler
+on: [ pull_request_target ]
 
-on: [ push ]
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
-  create_commit:
-    runs-on: ubuntu-latest 
-    permissions:
-      issues: write 
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/labeler@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+# Create issue on commit
+
+v2.1
+
+on: [ push ]
+   
+    create_commit:
+      runs-on: ubuntu-latest 
+      permissions:
+       issues: write 
     steps:
       - name: Create issue using REST API
         run: |
