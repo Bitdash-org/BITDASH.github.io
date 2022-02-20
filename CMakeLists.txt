@@ -21,9 +21,9 @@ include_directories(
 # find header
 file(GLOB_RECURSE HEADER "include/*.h")
 # find common
-file(GLOB Common_sources RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}/Common" "Common/*.cpp") --who-dev
+file(GLOB COMMON_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/Common "Common/*.cpp")
 # find source
-file(GLOB_RECURSE SOURCE "src/*.cpp") -who-dev
+file(GLOB_RECURSE SOURCE "src/*.cpp") 
 
 add_executable(${BITDASH-COIN}
   "${HEADER}"
