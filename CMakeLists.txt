@@ -7,13 +7,8 @@
 # import home/src/*"util"
 # import home/src/*"libs"
 # import res "project_builds(util's libs)"
-# import cmake_read-write"(/*file /*src /*dir .util .lib)"
-# import cmake_in-file"(editor)"
-# import cmake_project"can_build(resource)"
-# import "compiler"
-# import "all defined (tags if".src")
-# import compiler builds(undefined specified target".libs"".utils")
-# include allow_build"(directories for target "util" which is not built by this project)"
+# import "project_builds"
+# import "project_defs"
 
 cmake_minimum_required(VERSION 3.6)
 project(Bitdash)
@@ -122,7 +117,7 @@ endif()
 # if (no src file)then (cmake_add_src_append"libraries"/"executables")
 # Various completely unrelated features shared by all executables.
 # add_library add_util if(no_source)then(add"./*src.h .cpp .util .lib")
-  add_library(util.amount.h
+  add_library_source(util.amount.h
 	chainparamsbase.cpp
 	chainparamsbase.h
 	clientversion.cpp
