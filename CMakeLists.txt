@@ -81,8 +81,8 @@ if(FALSE AND (FALSE OR TRUE))
 # `set(<variable> <value>... [PARENT_SCOPE])`
 # How to reference variables inside quoted and unquoted arguments
 # A variable reference is replaced by the value of the variable, or by the
-# empty string if the variable is not set
-${variable_name}
+# empty string if the variable is not set(
+${variable_name})
 # Lists
 # Setup the list of source files
 set( LEARN_CMAKE_SOURCES
@@ -92,10 +92,10 @@ set( LEARN_CMAKE_SOURCES
 )
 # Calls the compiler
 #
-# ${PROJECT_NAME} refers to Learn_CMake 
-add_executable( ${PROJECT_NAME} ${LEARN_CMAKE_SOURCES} )
+# ${BITDASH-COIN} refers to Learn_CMake 
+add_executable( ${BITDASH-COIN} ${LEARN_CMAKE_SOURCES} )
 # Link the libraries
-target_link_libraries( ${PROJECT_NAME} ${LIBS} m )
+target_link_libraries( ${BITDASH-COIN} ${LIBS} m )
 # Where are the additional libraries installed? Note: provide includes
 # path here, subsequent checks will resolve everything else
 set( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/CMake/modules/" )
@@ -109,6 +109,6 @@ if( UNIX )
  set( LEARN_CMAKE_DEFINITIONS
  "${LEARN_CMAKE_DEFINITIONS} -Wall -Wextra -Werror -Wno-deprecated-declarations -
 Wno-unused-parameter -Wno-comment" )
-endif()     
+endif(${exitcode} "0")     
 
 
