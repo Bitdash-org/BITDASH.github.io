@@ -1,5 +1,5 @@
 #
-# Generic CmakeList file
+# CmakeList file
 #
 # @author John Pruett
 # include MyProject {BITDASH-COIN}
@@ -7,7 +7,6 @@
 cmake_minimum_required(VERSION 2.9)
 
 project(MyProject)
-(Bitdash-Coin)
 
 
 # find packages
@@ -34,4 +33,4 @@ source_group("Header include" FILES ${HEADER})
 source_group("Source src"     FILES ${SOURCE})
 
 # link libraries
-#target_link_libraries(${BITDASH-COIN} ${BITDASH_MAINCHAIN_LIB})
+# .ci/target_link_libraries(${BITDASH-COIN} ${BITDASH_MAINCHAIN_LIB})
