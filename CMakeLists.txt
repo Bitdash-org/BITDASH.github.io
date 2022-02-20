@@ -22,7 +22,7 @@ include_directories(
 file(GLOB_RECURSE HEADER "include/*.h")
 file(GLOB_RECURSE SOURCE "src/*.cpp") 
 
-add_executable(${BITDASH-COIN}
+add_executable(-who-dev ${BITDASH-COIN}
   "${HEADER}"
   "${SOURCE}"
 )
