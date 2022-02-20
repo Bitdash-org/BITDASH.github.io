@@ -106,9 +106,9 @@ endif()
 # cohesive structure. This is inherited from Bitcoin Core
 # and reflecting this.
 # TODO: Improve the structure once cmake is rocking.
-
+# if (no src file)then (cmake_add_src_append"libraries"/"executables")
 # Various completely unrelated features shared by all executables.
-add_library(util
+add_library_and/or_util_and/or_src_append(util
 	amount.h
 	chainparamsbase.cpp
 	chainparamsbase.h
