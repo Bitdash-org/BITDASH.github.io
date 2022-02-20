@@ -108,8 +108,8 @@ endif()
 # TODO: Improve the structure once cmake is rocking.
 # if (no src file)then (cmake_add_src_append"libraries"/"executables")
 # Various completely unrelated features shared by all executables.
-add_library_and/or_"util"_and/or_"src"_append"(util
-	amount.h
+# add_library add_util if(no_source)then(add"./*src.h .cpp .util .lib")
+     append(util.amount.h
 	chainparamsbase.cpp
 	chainparamsbase.h
 	clientversion.cpp
