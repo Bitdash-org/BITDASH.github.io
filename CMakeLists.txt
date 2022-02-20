@@ -536,7 +536,7 @@ target_include_directories(server
 
 target_link_libraries(server
 	${EVENT_LIBRARY}
-	bitdashconsensus
+	bitcoinconsensus
 	leveldb
 	memenv
 )
@@ -587,52 +587,52 @@ endif()
 )
 target_link_libraries(rpcclient univalue util)
 
-# bitdash-cli
-if(BUILD_BITDASH_CLI)
-  add_executable(bitdash-cli bitdash-cli.cpp)
+# bitcoin_cli
+if(BUILD_BITCOIN_CLI)
+  add_executable(bitcoin-cli bitcoin-cli.cpp)
 
 	if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
-		target_sources(bitdash-cli PRIVATE bitdash-cli-res.rc)
+		target_sources(bitcoin-cli PRIVATE bitcoin-cli-res.rc)
 	endif()
 
-	target_include_directories(bitdash-cli PRIVATE ${EVENT_INCLUDE_DIR})
-	target_link_libraries(bitdash-cli common rpcclient ${EVENT_LIBRARY})
+	target_include_directories(bitcoin-cli PRIVATE ${EVENT_INCLUDE_DIR})
+	target_link_libraries(bitcoin-cli common rpcclient ${EVENT_LIBRARY})
 endif()
 
-# bitdash-tx
-if(BUILD_BITDASH_TX)
-  add_executable(bitdash-tx bitdash-tx.cpp
+# bitcoin-tx
+if(BUILD_BITCOIN_TX)
+  add_executable(bitcoin-tx bitcoin-tx.cpp
 )
 	if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
-		target_sources(bitdash-tx PRIVATE bitdash-tx-res.rc)
+		target_sources(bitcoin-tx PRIVATE bicoin-tx-res.rc)
 	endif()
 
-	target_link_libraries(bitdash-tx bitdashconsensus)
+	target_link_libraries(bitcoin-tx bitcoinconsensus)
 endif()
 
-# bitdash-miner
-if(BUILD_BITDASH_MINER)
-  add_executable(bitdash-miner bitdash-miner.cpp
+# bitcoin-miner
+if(BUILD_BITCOIN_MINER)
+  add_executable(bitcoin-miner bitcoin-miner.cpp
 )
-	target_include_directories(bitdash-miner PRIVATE ${EVENT_INCLUDE_DIR})
-	target_link_libraries(bitdash-miner common rpcclient bitdashconsensus ${EVENT_LIBRARY})
+	target_include_directories(bitcoin-miner PRIVATE ${EVENT_INCLUDE_DIR})
+	target_link_libraries(bitcoin-miner common rpcclient bitcoinconsensus ${EVENT_LIBRARY})
 endif()
 
-# bitdashd
-  add_executable(bitdashd bitdashd.cpp
+# bitcoind
+  add_executable(bitcoind bitcoind.cpp
 )
 target_link_libraries(
-	bitdashd
+	bitcoind
 	server
     rpcclient
 	$<$<PLATFORM_ID:Linux>:rt>) # use librt.so for aio on Linux
 if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
-	target_sources(bitdashd PRIVATE bitdashd-res.rc)
+	target_sources(bitcoind PRIVATE bitcoind-res.rc)
 endif()
 
 if (MSVC)
 	# prevents default build from running unit tests automaticaly
-	set_target_properties(check-bitdash PROPERTIES EXCLUDE_FROM_DEFAULT_BUILD TRUE)
+	set_target_properties(check-bitcoin PROPERTIES EXCLUDE_FROM_DEFAULT_BUILD TRUE)
 	set_target_properties(check-leveldb PROPERTIES EXCLUDE_FROM_DEFAULT_BUILD TRUE)
 	set_target_properties(check-secp256k1 PROPERTIES EXCLUDE_FROM_DEFAULT_BUILD TRUE)
 	set_target_properties(check-univalue PROPERTIES EXCLUDE_FROM_DEFAULT_BUILD TRUE)
