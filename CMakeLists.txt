@@ -355,8 +355,8 @@ add_library(bitdashconsensus
 	script/script_num.cpp
 )
 
-target_link_libraries(bitcoinconsensus common)
-target_include_directories(bitcoinconsensus
+# target link libraries(bitcoinconsensus common)
+# target include directories(bitcoinconsensus
 	PRIVATE
 		${OPENSSL_INCLUDE_DIR}
 )
