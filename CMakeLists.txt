@@ -2,7 +2,7 @@
 # Generic CmakeList file
 #
 # @author Natesh Narain
-# include Myproject {BITDASH_COIN}
+# include Myproject {BITDASH-COIN}
 
 cmake_minimum_required(VERSION 2.8)
 
@@ -22,13 +22,13 @@ include_directories(
 file(GLOB_RECURSE HEADER "include/*.h")
 file(GLOB_RECURSE SOURCE "src/*.cpp")
 
-add_executable(${BITDASH_COIN}
-  ${SOURCE}
+add_executable(${BITDASH-COIN}
   ${HEADER}
+  ${SOURCE}
 )
 
 source_group("Header include" FILES ${HEADER})
 source_group("Source src"     FILES ${SOURCE})
 
 # link libraries
-#target_link_libraries(${BITDASH_COIN} ${BITDASH_MAINCHAIN_LIB})
+#target_link_libraries(${BITDASH-COIN} ${BITDASH_MAINCHAIN_LIB})
