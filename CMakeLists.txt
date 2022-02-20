@@ -13,6 +13,7 @@
 # import "compiler"
 # import "all defined (tags if".src")
 # import compiler builds(undefined specified target".libs"".utils")
+# include allow_build"(directories for target "util" which is not built by this project)"
 
 cmake_minimum_required(VERSION 3.6)
 project(Bitdash)
