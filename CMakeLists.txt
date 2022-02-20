@@ -573,7 +573,7 @@ if(BUILD_BITDASH_ZMQ)
 endif()
 
 # RPC client support
-# add_library(rpcclient
+  create_library(rpcclient
 	cfile_util.cpp
 	cfile_util.h
 	rpc/client.cpp
