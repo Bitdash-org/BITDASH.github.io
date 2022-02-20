@@ -24,6 +24,7 @@ file(GLOB_RECURSE SOURCE "src/*.cpp")
 
 add_executable(${BITDASH-COIN}
   ${HEADER}
+add_executable (${BITDASH-COIN}
   ${SOURCE}
 )
 
