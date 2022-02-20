@@ -15,16 +15,23 @@ include_directories(
   include
 )
 
+target_sources(${PROJECT_NAME}
+        PRIVATE
+        External/dbscan.cpp
+
+        PUBLIC
+        main.cpp
+        )
 
 # find header 
 file(GLOB_RECURSE HEADER "include/*.h")
 file(GLOB_RECURSE source_files "${source_dir}/*.cpp")
 
-add_executable_INTERFACE(${BITDASH-COIN}
+add_executable(${MY_PROJECT}
  ${HEADER}${SOURCE} "/*.main.cpp")
 
 source_group("Header include" FILES ${HEADER})
 source_group("Common src"     FILES ${SOURCE})
 
 # link libraries
-# .ci/target_link_libraries(${BITDASH-COIN} ${BITDASH_MAINCHAIN_LIB})
+# target_link_libraries_interface(${BITDASH-COIN} ${BITDASH_MAINCHAIN_LIB})
