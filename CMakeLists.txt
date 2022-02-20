@@ -4,8 +4,8 @@
 # import def(command=append)
 # import def(add_src add_lib add_util)
 # import cmake_builds(project "utilities libraries source")if else=empty
-# import def "util"
-# import def "libs"
+# import home/src/*"util"
+# import home/src/*"libs"
 # import res "project_builds(util's libs)"
 # import cmake_read-write"(/*file /*src /*dir .util .lib)"
 # import cmake_in-file"(editor)"
