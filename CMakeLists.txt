@@ -81,8 +81,7 @@ if(FALSE AND (FALSE OR TRUE))
 # `set(<variable> <value>... [PARENT_SCOPE])`
 # How to reference variables inside quoted and unquoted arguments
 # A variable reference is replaced by the value of the variable, or by the
-# empty string if the variable is not set(
-${CMAKE_SET}"variable_name")
+  variable name If_empty_string_then_set_variable_name CMAKE(${SET}"/*variable_name")
 # Lists
 # Setup the list of source files
 set( LEARN_CMAKE_SOURCES
