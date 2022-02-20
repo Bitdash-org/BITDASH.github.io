@@ -93,7 +93,7 @@ endif()
 # find_package(OpenSSL REQUIRED)
 
 # libtool style configure
-add_config(subdirectory)
+# add_config(subdirectory)
 
 # libraries
 # add_subdirectory("/*.crypto")
