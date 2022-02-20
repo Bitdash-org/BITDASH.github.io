@@ -3,6 +3,11 @@
 # Distributed under the MIT license, see the accompanying file LICENSE.
 # import def(command=append)
 # import def(add_src add_lib add_util)
+# import cmake_builds(project "utilities libraries source")if else=empty
+# import def util
+# import def libs
+# import res util's libs 
+# import cmake_read-write(/*file /*src /*dir .util .lib)
 
 cmake_minimum_required(VERSION 3.5)
 project(Bitdash)
