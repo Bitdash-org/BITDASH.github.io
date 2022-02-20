@@ -53,28 +53,24 @@ if ( CONDITION )
  # CMake Error, stop processing and generation
  message(FATAL_ERROR "My message")
 endif()
-if( CONDITION )
-elseif( CONDITION )
-else( CONDITION )
-endif( CONDITION )
+if( CONDITION )elseif( CONDITION )else( CONDITION )endif( CONDITION )
 # Loops
-foreach(loop_var arg1 arg2 ...)
- COMMAND1(ARGS ...)
- COMMAND2(ARGS ...)
-endforeach(loop_var)
-foreach(loop_var RANGE total)
-foreach(loop_var RANGE start stop [step])
-foreach(loop_var IN [LISTS [list1 [...]]]
- [ITEMS [item1 [...]]])
-while(condition)
- COMMAND1(ARGS ...)
- COMMAND2(ARGS ...)
-endwhile(condition)
+   foreach(loop_var arg1 arg2 ...)
+   COMMAND1(ARGS ...)
+   COMMAND2(ARGS ...)
+   endforeach(loop_var)
+   foreach(loop_var RANGE total)
+   foreach(loop_var RANGE start stop [step])
+   foreach(loop_var IN [LISTS [list1 [...]]]
+   [ITEMS [item1 [...]]])
+   while(condition)
+   COMMAND1(ARGS ...)
+   COMMAND2(ARGS ...)
+   endwhile(condition)
 # Logic Operations
 if(FALSE AND (FALSE OR TRUE))
  message("Don't display!")
-    
-   endif()
+ endif()
 # Set a normal, cache, or environment variable to a given value.
 # If the PARENT_SCOPE option is given the variable will be set in the scope
 # above the current scope.
@@ -99,9 +95,9 @@ target_link_libraries( ${BITDASH-COIN} ${LIBS} m )
 # path here, subsequent checks will resolve everything else
 set( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/CMake/modules/" )
 # Compiler Condition (gcc ; g++)
-if ( "${CMAKE_C_COMPILER_ID}" STREQUAL "GNU" )
- message( STATUS "Setting the flags for ${CMAKE_C_COMPILER_ID} compiler" )
- add_definitions( --std=c99 )
+if ( "${CMAKE_C_COMPILER_ID}" STREQUAL "GNU" 
+message( STATUS "Setting the flags for ${CMAKE_C_COMPILER_ID} compiler" )
+add_definitions( --std=c99 )
 endif()
 # Check for OS
 if( UNIX )
