@@ -17,17 +17,18 @@ include_directories(
 )
 
 
-# find header and source
+# find header 
 file(GLOB_RECURSE HEADER "include/*.h")
-file(GLOB_RECURSE SOURCE "src/*.cpp") 
+file(GLOB Common_sources RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}/Common" "Common/*.cpp")
+# gets: my_source.cpp
 
 add_executable(${BITDASH-COIN}
-  "${HEADER}"
-  "${SOURCE}"
+   "${HEADER}
+  ${SOURCE}"
 )
 
 source_group("Header include" FILES ${HEADER})
 source_group("Source src"     FILES ${SOURCE})
 
 # link libraries
-# .ci/target_link_libraries(${BITDASH-COIN} ${BITDASH_MAINCHAIN_LIB})
+# .ci/target_link_libraries(${BITDASH-COIN} "${BITDASH_MAINCHAIN_LIB}")
