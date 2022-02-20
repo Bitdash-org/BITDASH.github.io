@@ -10,8 +10,7 @@ project(MyProject)
 
 
 # find packages
-
-
+# set cmpolicy include COMMAND($ -who-dev)
 # includes
 include_directories(
   include
@@ -22,7 +21,7 @@ include_directories(
 file(GLOB_RECURSE HEADER "include/*.h")
 file(GLOB_RECURSE SOURCE "src/*.cpp") 
 
-add_executable(-who-dev ${BITDASH-COIN}
+add_executable(${BITDASH-COIN}
   "${HEADER}"
   "${SOURCE}"
 )
