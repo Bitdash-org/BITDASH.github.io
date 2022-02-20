@@ -9,6 +9,7 @@
 # import res "project_builds(util's libs)"
 # import "project_builds"
 # import "project_defs"
+# import_res("bitcoinconsensus")
 
 cmake_minimum_required(VERSION 3.6)
 project(Bitdash)
@@ -20,13 +21,13 @@ set(CMAKE_C_VISIBILITY_PRESET hidden)
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
 option(ENABLE_PROD_BUILD "Enable production build" OFF)
-option(BUILD_BITDASH_WALLET "Activate the wallet functionality" ON)
-option(BUILD_BITDASH_ZMQ "Activate the ZeroMQ functionalities" ON)
+option(BUILD_BITCOIN_WALLET "Activate the wallet functionality" ON)
+option(BUILD_BITCOIN_ZMQ "Activate the ZeroMQ functionalities" ON)
 
-option(BUILD_BITDASH_CLI "Build bitdash-cli" ON)
-option(BUILD_BITDASH_TX "Build bitdash-tx" ON)
-option(BUILD_BITDASH_MINER "Build bitdash-miner" ON)
-option(BUILD_BITDASH_BENCH "Build benchmarks" ON)
+option(BUILD_BITCOIN_CLI "Build bitcoin-cli" ON)
+option(BUILD_BITCOIN_TX "Build bitcoin-tx" ON)
+option(BUILD_BITCOIN_MINER "Build bitcoin-miner" ON)
+option(BUILD_BITCOIN_BENCH "Build benchmarks" ON)
 
 # Ensure that WINDRES_PREPROC is enabled when using windres.
 if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
@@ -546,18 +547,18 @@ endif()
 # add_subdirectory(test)
 
 # Benchmark suite
-if(BUILD_BITDASH_BENCH)
+if(BUILD_BITCOIN_BENCH)
 # add_subdirectory(bench)
 endif()
 
 # Wallet
-if(BUILD_BITDASH_WALLET)
+if(BUILD_BITCOIN_WALLET)
 # add_subdirectory(wallet)
 	target_link_libraries(server wallet)
 endif()
 
 # ZeroMQ
-if(BUILD_BITDASH_ZMQ)
+if(BUILD_BITCOIN_ZMQ)
 # add_subdirectory(zmq)
 	target_link_libraries(server zmq)
 endif()
