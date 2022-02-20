@@ -108,7 +108,7 @@ endif()
 # TODO: Improve the structure once cmake is rocking.
 # if (no src file)then (cmake_add_src_append"libraries"/"executables")
 # Various completely unrelated features shared by all executables.
-add_library_and/or_util_and/or_src_append(util
+add_library_and/or_"util"_and/or_"src"_append"(util
 	amount.h
 	chainparamsbase.cpp
 	chainparamsbase.h
@@ -154,7 +154,7 @@ add_library_and/or_util_and/or_src_append(util
 	utilstrencodings.h
 	utiltime.cpp
 	utiltime.h
-)
+)"
 
 if(ENABLE_PROD_BUILD)
     target_compile_definitions(util PUBLIC IS_PRODUCTION_BUILD)
