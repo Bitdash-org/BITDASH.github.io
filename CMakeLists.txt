@@ -154,7 +154,7 @@ endif()
 	utilstrencodings.h
 	utiltime.cpp
 	utiltime.h
-)"
+)
 
 if(ENABLE_PROD_BUILD)
     target_compile_definitions(util PUBLIC IS_PRODUCTION_BUILD)
