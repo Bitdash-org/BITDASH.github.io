@@ -82,7 +82,7 @@ if(FALSE AND (FALSE OR TRUE))
 # How to reference variables inside quoted and unquoted arguments
 # A variable reference is replaced by the value of the variable, or by the
 # empty string if the variable is not set(
-${variable_name})
+${VARIABLE_NAME})
 # Lists
 # Setup the list of source files
 set( LEARN_CMAKE_SOURCES
@@ -109,6 +109,6 @@ if( UNIX )
  set( LEARN_CMAKE_DEFINITIONS
  "${LEARN_CMAKE_DEFINITIONS} -Wall -Wextra -Werror -Wno-deprecated-declarations -
 Wno-unused-parameter -Wno-comment" )
-endif(${exitcode} "0")     
+endif(${EXITCODE_STATUS} "0")     
 
 
