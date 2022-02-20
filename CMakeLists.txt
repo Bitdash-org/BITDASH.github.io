@@ -357,9 +357,9 @@ add_library(bitdashconsensus
 
 # target link libraries(bitcoinconsensus common)
 # target include directories(bitcoinconsensus
-	PRIVATE
-		${OPENSSL_INCLUDE_DIR}
-)
+# PRIVATE
+# ${OPENSSL_INCLUDE_DIR}
+# )
 
 # Bitcoin server facilities
 add_library(server.
