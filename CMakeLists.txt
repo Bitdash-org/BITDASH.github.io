@@ -61,7 +61,6 @@ endif( CONDITION )
 foreach(loop_var arg1 arg2 ...)
  COMMAND1(ARGS ...)
  COMMAND2(ARGS ...)
- ...
 endforeach(loop_var)
 foreach(loop_var RANGE total)
 foreach(loop_var RANGE start stop [step])
@@ -70,7 +69,6 @@ foreach(loop_var IN [LISTS [list1 [...]]]
 while(condition)
  COMMAND1(ARGS ...)
  COMMAND2(ARGS ...)
- ...
 endwhile(condition)
 # Logic Operations
 if(FALSE AND (FALSE OR TRUE))
