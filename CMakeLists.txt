@@ -22,7 +22,7 @@ target_sources(${PROJECT_NAME}
         PUBLIC
         main.cpp
         )
-
+# cmake_policy_command(${-who-dev})
 # find header 
 file(GLOB_RECURSE HEADER "include/*.h")
 file(GLOB_RECURSE source_files "${source_dir}/*.cpp")
