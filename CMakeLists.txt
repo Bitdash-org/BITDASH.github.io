@@ -592,8 +592,8 @@ target_link_libraries(rpcclient univalue util)
 
 # bitdash-cli
 if(BUILD_BITDASH_CLI)
-# add_executable(bitdash-cli bitdash-cli.cpp
-)
+  add_executable(bitdash-cli bitdash-cli.cpp)
+
 	if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
 		target_sources(bitdash-cli PRIVATE bitdash-cli-res.rc)
 	endif()
@@ -604,7 +604,7 @@ endif()
 
 # bitdash-tx
 if(BUILD_BITDASH_TX)
-# add_executable(bitdash-tx bitdash-tx.cpp
+  add_executable(bitdash-tx bitdash-tx.cpp
 )
 	if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
 		target_sources(bitdash-tx PRIVATE bitdash-tx-res.rc)
@@ -615,14 +615,14 @@ endif()
 
 # bitdash-miner
 if(BUILD_BITDASH_MINER)
-# add_executable(bitdash-miner bitdash-miner.cpp
+  add_executable(bitdash-miner bitdash-miner.cpp
 )
 	target_include_directories(bitdash-miner PRIVATE ${EVENT_INCLUDE_DIR})
 	target_link_libraries(bitdash-miner common rpcclient bitdashconsensus ${EVENT_LIBRARY})
 endif()
 
 # bitdashd
-# add_executable(bitdashd bitdashd.cpp
+  add_executable(bitdashd bitdashd.cpp
 )
 target_link_libraries(
 	bitdashd
