@@ -18,10 +18,10 @@ include_directories(
 
 # find header 
 file(GLOB_RECURSE HEADER "include/*.h")
-file(GLOB Common_sources RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}/Common" "src/*.cpp")
+file(GLOB_RECURSE source_files "${source_dir}/*.cpp")
 
 add_executable(${BITDASH-COIN}
- ${HEADER}${SOURCE})
+ ${HEADER}${SOURCE} "/*.Bitdash")
 
 source_group("Header include" FILES ${HEADER})
 source_group("Common src"     FILES ${SOURCE})
