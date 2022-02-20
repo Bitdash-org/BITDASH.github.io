@@ -165,10 +165,10 @@ endif()
 )
 
 if(ENABLE_PROD_BUILD)
-    target_compile_definitions(util PUBLIC IS_PRODUCTION_BUILD)
+# target_compile_definitions(util PUBLIC IS_PRODUCTION_BUILD)
 endif()
-target_compile_definitions(util PUBLIC HAVE_CONFIG_H)
-target_include_directories(util
+# target_compile_definitions(util PUBLIC HAVE_CONFIG_H)
+# target_include_directories(util
 	PUBLIC
 		.
 		# To access the config.
