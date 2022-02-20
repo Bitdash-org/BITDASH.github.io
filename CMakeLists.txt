@@ -1,6 +1,8 @@
 # Copyright (c) 2017 The Bitcoin developers
 # Copyright (c) 2019-2020 Bitcoin Association
-# Distributed under the Open BDSH software license, see the accompanying file LICENSE.
+# Distributed under the MIT license, see the accompanying file LICENSE.
+# import def(command=append)
+# import def(add_src add_lib add_util)
 
 cmake_minimum_required(VERSION 3.5)
 project(Bitdash)
