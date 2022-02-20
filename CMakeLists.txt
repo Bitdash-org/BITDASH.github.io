@@ -9,7 +9,7 @@ cmake_minimum_required(VERSION 2.9)
 project(MyProject)
 
 
-# find packages
+# find packages(
 mkdir -p build
 cd build
   cmake \
@@ -22,7 +22,7 @@ cd build
     -DCMAKE_BUILD_TYPE=Release ..
   make
   make install DESTDIR=$PKG
-cd ..
+cd)
 # includes
 include_directories(
   include
