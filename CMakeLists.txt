@@ -21,7 +21,7 @@ file(GLOB_RECURSE HEADER "include/*.h")
 file(GLOB_RECURSE source_files "${source_dir}/*.cpp")
 
 add_executable(${BITDASH-COIN}
- ${HEADER}${SOURCE} "/*.source")
+ ${HEADER}${SOURCE} "/*.main.cpp")
 
 source_group("Header include" FILES ${HEADER})
 source_group("Common src"     FILES ${SOURCE})
