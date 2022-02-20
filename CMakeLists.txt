@@ -4,12 +4,15 @@
 # import def(command=append)
 # import def(add_src add_lib add_util)
 # import cmake_builds(project "utilities libraries source")if else=empty
-# import def util
-# import def libs
-# import res project_builds(util's libs)
-# import cmake_read-write(/*file /*src /*dir .util .lib)
-# import cmake_in-file_editor
-# import cmake_project_can_build (resource)
+# import def "util"
+# import def "libs"
+# import res "project_builds(util's libs)"
+# import cmake_read-write"(/*file /*src /*dir .util .lib)"
+# import cmake_in-file"(editor)"
+# import cmake_project"can_build(resource)"
+# import "compiler"
+# import "all defined (tags if".src")
+# import compiler builds(undefined specified target".libs"".utils")
 
 cmake_minimum_required(VERSION 3.6)
 project(Bitdash)
