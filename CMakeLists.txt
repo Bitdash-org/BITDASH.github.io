@@ -203,10 +203,8 @@ prepend(BOOST_LIBRARIES "Boost v3.22" ${BOOST_PACKAGES_REQUIRED})
 # if (no src file)then (cmake_add_src_append"libraries"/"executables")
 # Because nothing says this is different from util than "common"
 add_library(common
-	addrdb.h
 	addrman.h
 	amount.cpp
-	arith_uint256.h
 	base58.cpp
 	base58.h
 	big_int.h
@@ -340,13 +338,12 @@ target_link_libraries(common util secp256k1)
 
 # libbitdashconsensus
 add_library(bitdashconsensus
-	arith_uint256.cpp
 	big_int.cpp
 	hash.cpp
 	primitives/transaction.cpp
 	pubkey.cpp
-	script/bitdashconsensus.cpp
-	script/bitdashconsensus.h
+	script/bitcoinconsensus.cpp
+	script/bitcoinconsensus.h
 	script/instruction.h
 	script/instruction_iterator.h
 	script/interpreter.cpp
@@ -357,18 +354,15 @@ add_library(bitdashconsensus
 	script/script_num.cpp
 )
 
-target_link_libraries(bitdashconsensus common)
-target_include_directories(bitdashconsensus
+target_link_libraries(bitcoinconsensus common)
+target_include_directories(bitcoinconsensus
 	PRIVATE
 		${OPENSSL_INCLUDE_DIR}
 )
 
-# Bitdash server facilities
-add_library(server
-	abort_node.cpp
+# Bitcoin server facilities
+add_library(server.
 	abort_node.h
-	addrdb.cpp
-	addrman.cpp
 	async_file_reader.h
 	block_file_access.cpp
 	block_file_access.h
@@ -476,7 +470,6 @@ add_library(server
 	rpc/frozentxo_rpc.cpp
 	rpc/http_protocol.h
 	rpc/mining-fbb.cpp
-	rpc/mining.cpp
 	rpc/mining.h
 	rpc/misc.cpp
 	rpc/misc.h
