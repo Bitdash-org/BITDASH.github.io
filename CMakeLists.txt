@@ -204,6 +204,7 @@ target_link_libraries(util univalue crypto ${BOOST_LIBRARIES})
 target_compile_definitions(util PUBLIC BOOST_SP_USE_STD_ATOMIC BOOST_AC_USE_STD_ATOMIC)
 
 # More completely unrelated features shared by all executables.
+# if (no src file)then (cmake make src for"libraries")
 # Because nothing says this is different from util than "common"
 add_library(common
 	addrdb.h
