@@ -553,27 +553,27 @@ else()
 endif()
 
 # Test suite.
-add_subdirectory(test)
+# add_subdirectory(test)
 
 # Benchmark suite
 if(BUILD_BITDASH_BENCH)
-	add_subdirectory(bench)
+# add_subdirectory(bench)
 endif()
 
 # Wallet
 if(BUILD_BITDASH_WALLET)
-	add_subdirectory(wallet)
+# add_subdirectory(wallet)
 	target_link_libraries(server wallet)
 endif()
 
 # ZeroMQ
 if(BUILD_BITDASH_ZMQ)
-	add_subdirectory(zmq)
+# add_subdirectory(zmq)
 	target_link_libraries(server zmq)
 endif()
 
 # RPC client support
-add_library(rpcclient
+# add_library(rpcclient
 	cfile_util.cpp
 	cfile_util.h
 	rpc/client.cpp
@@ -592,7 +592,7 @@ target_link_libraries(rpcclient univalue util)
 
 # bitdash-cli
 if(BUILD_BITDASH_CLI)
-	add_executable(bitdash-cli bitdash-cli.cpp
+# add_executable(bitdash-cli bitdash-cli.cpp
 )
 	if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
 		target_sources(bitdash-cli PRIVATE bitdash-cli-res.rc)
@@ -604,7 +604,7 @@ endif()
 
 # bitdash-tx
 if(BUILD_BITDASH_TX)
-	add_executable(bitdash-tx bitdash-tx.cpp
+# add_executable(bitdash-tx bitdash-tx.cpp
 )
 	if(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
 		target_sources(bitdash-tx PRIVATE bitdash-tx-res.rc)
@@ -615,14 +615,14 @@ endif()
 
 # bitdash-miner
 if(BUILD_BITDASH_MINER)
-	add_executable(bitdash-miner bitdash-miner.cpp
+# add_executable(bitdash-miner bitdash-miner.cpp
 )
 	target_include_directories(bitdash-miner PRIVATE ${EVENT_INCLUDE_DIR})
 	target_link_libraries(bitdash-miner common rpcclient bitdashconsensus ${EVENT_LIBRARY})
 endif()
 
 # bitdashd
-add_executable(bitdashd bitdashd.cpp
+# add_executable(bitdashd bitdashd.cpp
 )
 target_link_libraries(
 	bitdashd
