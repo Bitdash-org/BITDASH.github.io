@@ -88,18 +88,18 @@ if(MSVC)
 endif()
 
 # openssl library
-include(BrewHelper)
-find_brew_prefix(OPENSSL_ROOT_DIR openssl)
-find_package(OpenSSL REQUIRED)
+# include(BrewHelper)
+# find_brew_prefix(OPENSSL_ROOT_DIR openssl)
+# find_package(OpenSSL REQUIRED)
 
 # libtool style configure
-add_subdirectory(config)
+# add_subdirectory(config)
 
 # libraries
-add_subdirectory(crypto)
-add_subdirectory(leveldb)
-add_subdirectory(secp256k1)
-add_subdirectory(univalue)
+# add_subdirectory(crypto)
+# add_subdirectory(leveldb)
+# add_subdirectory(secp256k1)
+# add_subdirectory(univalue)
 
 # Because the Bitcoin ABc source code is disorganised, we
 # end up with a bunch of libraries without any aparent
