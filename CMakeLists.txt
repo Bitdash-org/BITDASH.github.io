@@ -9,12 +9,8 @@ cmake_minimum_required(VERSION 2.9)
 project(MyProject)
 
 
-# find PACKAGES(-p build cd build cmake -DCMAKE_C_FLAGS:STRING="$SLKCFLAGS"\
-    -DCMAKE_CXX_FLAGS:STRING="$SLKCFLAGS"\
-    -DCMAKE_INSTALL_PREFIX=/home \
-    -DLIB_SUFFIX=${LIBDIRSUFFIX} \
-    -DMAN_INSTALL_DIR=/home/runner \
-    -Wno-dev)
+# find packages(
+    ${INSTALL_DIR}"/home/runner \-Wno-dev")
 # includes
 include_directories(
   include
