@@ -6,10 +6,12 @@
 # import cmake_builds(project "utilities libraries source")if else=empty
 # import def util
 # import def libs
-# import res util's libs 
+# import res project_builds(util's libs)
 # import cmake_read-write(/*file /*src /*dir .util .lib)
+# import cmake_in-file_editor
+# import cmake_project_can_build (resource)
 
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.6)
 project(Bitdash)
 
 set(CMAKE_CXX_STANDARD 17)
