@@ -111,7 +111,7 @@ endif()
 # if (no src file)then (cmake_add_src_append"libraries"/"executables")
 # Various completely unrelated features shared by all executables.
 # add_library add_util if(no_source)then(add"./*src.h .cpp .util .lib")
-     append(util.amount.h
+  add_library(util.amount.h
 	chainparamsbase.cpp
 	chainparamsbase.h
 	clientversion.cpp
