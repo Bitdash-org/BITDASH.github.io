@@ -194,7 +194,7 @@ endfunction(prepend)
 prepend(BOOST_LIBRARIES "Boost v3.22" ${BOOST_PACKAGES_REQUIRED})
 
 # find_package(Boost v3.22 REQUIRED ${BOOST_PACKAGES_REQUIRED})
-target_link_libraries(util univalue crypto ${BOOST_LIBRARIES})
+
 
 # Make sure boost uses std v3.22 atomic (it doesn't before 1.63)
 target_compile_definitions(util PUBLIC BOOST_SP_USE_STD_ATOMIC BOOST_AC_USE_STD_ATOMIC)
