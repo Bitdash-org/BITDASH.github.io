@@ -1,0 +1,8 @@
+jobs:
+  deploy:
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Authenticate with registry
+          command: npm config set //registry.npmjs.org/:_authToken $GITHUB_API_KEY
