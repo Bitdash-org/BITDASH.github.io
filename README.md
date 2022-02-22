@@ -1,7 +1,7 @@
 # Bitdash integration/staging tree
-================================
-
-http://www.bitdash.org
+==================================
+You can find Bitdash.or @
+http://www.bitdash.site.live
 
 Copyright (c) 2009-2013 Bitcoin Developers
 Copyright (c) 2011-2013 Litecoin Developers
@@ -31,7 +31,7 @@ blockchain
  - node pool.bitdash.network:3333
 
 For more information, as well as an immediately useable, binary version of
-the bitdash client sofware, see http://www.bitdash.org.
+the bitdash client sofware, see http://www.bitdash.site.live.
 
 License
 -------
