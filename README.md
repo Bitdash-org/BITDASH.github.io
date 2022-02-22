@@ -82,4 +82,11 @@ Unit tests for the GUI code are in `src/qt/test/`. To compile and run them:
     qmake BITCOIN_QT_TEST=1 -o Makefile.test bitcoin-qt.pro
     make -f Makefile.test
     ./bitdash-qt_test
+### INTERESTED IN JOINING THE DEVELOPMENTAL TEAM ###
 
+Reach out to me 
+  1) email me at gq1981inc@gmail.com 
+  2) Fork and create a pull request  
+  3) Create a pull request and simply open or raise an issue
+
+I would like to thank all the developers and coders at and on github.com without you I personally wouldn't have ever gotten past solitaire on windows! Thank you for open source!
